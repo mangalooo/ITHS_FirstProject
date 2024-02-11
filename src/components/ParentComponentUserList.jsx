@@ -1,5 +1,3 @@
-
-
 import UserItem from "./ChildComponentUserItem";
 
 function UserList() 

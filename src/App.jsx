@@ -1,6 +1,7 @@
 import './App.css';
 import MyClass from './components/MyClass';
 import ParentComponentUserList from './components/ParentComponentUserList';
+import Event from './components/Event';
 {/*
 import MyFunction from './components/MyFunction';
 import MapFilterReduceFind from './components/MapFilterReduceFind';
@@ -19,6 +20,7 @@ function App() {
           <div>
               <MyClass />
               <ParentComponentUserList />
+              <Event />
               
               {/* 
                 <MyFunction />

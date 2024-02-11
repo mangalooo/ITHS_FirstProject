@@ -1,5 +1,6 @@
 import './App.css';
 import MyClass from './components/MyClass';
+import ParentComponentUserList from './components/ParentComponentUserList';
 {/*
 import MyFunction from './components/MyFunction';
 import MapFilterReduceFind from './components/MapFilterReduceFind';
@@ -7,10 +8,9 @@ import Destruct from './components/Destruct';
 import TernaryOperator from './components/TernaryOperator';
 import SpreadOperator from './components/SpreadOperator';
 import MyClassComponent from './components/MyClassComponent';
+
 import { sum } from './components/Modules';
 */}
-import ParentComponentUserList from './components/ParentComponentUserList';
-
 
 function App() {
 
@@ -27,6 +27,7 @@ function App() {
                 <TernaryOperator /> 
                 <SpreadOperator />
                 <MyClassComponent />
+                
                 <p>{ sum(5,3) }</p>
             */}
 

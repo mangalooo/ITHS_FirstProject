@@ -1,7 +1,7 @@
 import './App.css';
 import MyClass from './components/MyClass';
-import ParentComponentUserList from './components/ParentComponentUserList';
-import Event from './components/Event';
+import AddUpdateDeleteToList from './components/AddUpdateDeleteToList';
+
 {/*
 import MyFunction from './components/MyFunction';
 import MapFilterReduceFind from './components/MapFilterReduceFind';
@@ -9,6 +9,8 @@ import Destruct from './components/Destruct';
 import TernaryOperator from './components/TernaryOperator';
 import SpreadOperator from './components/SpreadOperator';
 import MyClassComponent from './components/MyClassComponent';
+import Event from './components/Event';
+import ParentComponentUserList from './components/ParentComponentUserList';
 
 import { sum } from './components/Modules';
 */}
@@ -19,8 +21,7 @@ function App() {
       <>
           <div>
               <MyClass />
-              <ParentComponentUserList />
-              <Event />
+              <AddUpdateDeleteToList />
               
               {/* 
                 <MyFunction />
@@ -29,7 +30,8 @@ function App() {
                 <TernaryOperator /> 
                 <SpreadOperator />
                 <MyClassComponent />
-                
+                <ParentComponentUserList />
+                <Event />
                 <p>{ sum(5,3) }</p>
             */}
 

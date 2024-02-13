@@ -24,16 +24,16 @@ const ListManipulationExample = () => {
         <div>
             <ul>
                 {data.map((item, index) => (
-                    <il key={index}> 
-                        {item} 
-                        <button onClick={() => updateItem(index)}> Update </button> 
-                        <button onClick={() => removeItem(index)}> Delete </button> 
-                    </il> 
+                    <il key={index}>
+                        {item}
+                        <button onClick={() => updateItem(index)}> Update </button>
+                        <button onClick={() => removeItem(index)}> Delete </button>
+                    </il>
                 ))}
             </ul>
             <button onClick={addItem}> Add </button>
             <br />
-            
+
         </div>
     );
 };

@@ -21,18 +21,27 @@
 }
 
 import './App.css'
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import { Home } from './components/routerDom/Home'
 import { NotFound } from './components/routerDom/NotFound'
 import { BookRoutes } from './components/routerDom/BookRoutes'
+import './components/css/styles.css'
 
 function App() {
+    const location = useLocation()
     return (
         <>
             <nav>
                 <ul>
                     <li>
-                        <Link to='/'> Home </Link>
+                        {/* Add styles.css to the link */}
+                        <NavLink to='/'>
+
+                            {/* Controll the link name */}
+                            {({ isActive }) => {
+                                return isActive ? 'Home active' : 'Home'
+                            }}
+                        </NavLink>
                     </li>
                     <li>
                         <Link to='/books'> Books </Link>
@@ -40,10 +49,12 @@ function App() {
                 </ul>
             </nav>
 
+            {location.state}
+
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/books/*" element={<BookRoutes />} />
-                <Route path="*" element={<NotFound />} />
+                <Route path="/books/*" element={<BookRoutes />} /> {/* * = All books */}
+                <Route path="*" element={<NotFound />} />  {/* * = if the URL doesn`t match, you are sent to "NotFound" */}
             </Routes>
         </>
     )

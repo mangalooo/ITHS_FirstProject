@@ -25,12 +25,16 @@ import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import { Home } from './components/routerDom/Home'
 import { NotFound } from './components/routerDom/NotFound'
 import { BookRoutes } from './components/routerDom/BookRoutes'
+import BasicForm from './components/form/BasicForm';
+import ControlledComponents from './components/form/ControlledComponents';
 import './components/css/styles.css'
 
 function App() {
     const location = useLocation()
     return (
         <>
+            <BasicForm />
+            <ControlledComponents />
             <nav>
                 <ul>
                     <li>
@@ -60,6 +64,7 @@ function App() {
     )
 
     /*
+        Week 1 - 3
       <>
           <div>
                 <MyClass />

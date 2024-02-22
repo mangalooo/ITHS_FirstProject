@@ -18,10 +18,10 @@ const BasicForm = () => {
 
     // Handle form submission
     const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent the default form submission behavior
+        event.preventDefault() // Prevent the default form submission behavior
         // Process form data, e.g., send to server or perform actions
-        console.log('Submitted:', name, email);
-    };
+        console.log('Submitted:', name, email)
+    }
 
     // Render  a form with input fields and a submit button
     return (
@@ -29,13 +29,13 @@ const BasicForm = () => {
             <label>
                 Name:
                 {/* {Input field for capturing user`s name */}
-                    <input type="text" value={name} onChange={handleNameChange} />
+                <input type="text" value={name} onChange={handleNameChange} />
             </label>
             <br />
             <label>
                 Email:
                 {/* {Input field for capturing user`s email */}
-                    <input type="text" value={email} onChange={handleEmailChange} />
+                <input type="text" value={email} onChange={handleEmailChange} />
             </label>
             <br />
             {/* Submin button triggers the 'handleSubmit' function */}

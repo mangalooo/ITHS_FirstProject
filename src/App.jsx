@@ -1,6 +1,7 @@
 import './App.css';
-import MyClass from './components/MyClass';
-import AddUpdateDeleteToList from './components/AddUpdateDeleteToList';
+// import MyClass from './components/MyClass';
+// import AddUpdateDeleteToList from './components/AddUpdateDeleteToList';
+import TestuseRef from './components/TestuseRef';
 
 {/*
 import MyFunction from './components/MyFunction';
@@ -19,11 +20,12 @@ function App() {
 
   return (
       <>
-          <div>
-              <MyClass />
-              <AddUpdateDeleteToList />
-              
+          <TestuseRef />
+          
               {/* 
+                <TestUseEffect />
+                <MyClass />
+                <AddUpdateDeleteToList />
                 <MyFunction />
                 <MapFilterReduceFind />
                 <Destruct />
@@ -35,7 +37,6 @@ function App() {
                 <p>{ sum(5,3) }</p>
             */}
 
-          </div>
       </>
   )
 }

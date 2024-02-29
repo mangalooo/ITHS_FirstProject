@@ -1,6 +1,6 @@
 import UserItem from "./ChildComponentUserItem";
 
-function UserList() 
+function UserList()
 {
     const users = [
         { name: 'Magnus Leanderson', age: 39 },

@@ -1,7 +1,6 @@
 import './App.css';
-// import MyClass from './components/MyClass';
-// import AddUpdateDeleteToList from './components/AddUpdateDeleteToList';
-import TestuseRef from './components/TestuseRef';
+import MyClass from './components/MyClass';
+import AddUpdateDeleteToList from './components/AddUpdateDeleteToList';
 
 {/*
 import MyFunction from './components/MyFunction';
@@ -13,32 +12,77 @@ import MyClassComponent from './components/MyClassComponent';
 import Event from './components/Event';
 import ParentComponentUserList from './components/ParentComponentUserList';
 
-import { sum } from './components/Modules';
-*/}
+        import { sum } from './components/Modules';
+    */
+}
+
+import './App.css'
+import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom'
+import { Home } from './components/routerDom/Home'
+import { NotFound } from './components/routerDom/NotFound'
+import { BookRoutes } from './components/routerDom/BookRoutes'
+import BasicForm from './components/form/BasicForm'
+import ControlledComponents from './components/form/ControlledComponents'
+import './components/css/styles.css'
 
 function App() {
+    const location = useLocation()
+    return (
+        <>
+            <BasicForm />
+            <ControlledComponents />
+            <nav>
+                <ul>
+                    <li>
+                        {/* Add styles.css to the link */}
+                        <NavLink to="/">
+                            {/* Controll the link name */}
+                            {({ isActive }) => {
+                                return isActive ? 'Home active' : 'Home'
+                            }}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <Link to="/books"> Books </Link>
+                    </li>
+                </ul>
+            </nav>
 
-  return (
+            {location.state}
+
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/books/*" element={<BookRoutes />} />{' '}
+                {/* * = All books */}
+                <Route path="*" element={<NotFound />} />{' '}
+                {/* * = if the URL doesn`t match, you are sent to "NotFound" */}
+            </Routes>
+        </>
+    )
+
+    /*
+        Week 1 - 3
       <>
-          <TestuseRef />
-          
+          <div>
+              <MyClass />
+              <AddUpdateDeleteToList />
+              
               {/* 
-                <TestUseEffect />
-                <MyClass />
-                <AddUpdateDeleteToList />
                 <MyFunction />
                 <MapFilterReduceFind />
                 <Destruct />
-                <TernaryOperator /> 
+                <TernaryOperator />
                 <SpreadOperator />
                 <MyClassComponent />
                 <ParentComponentUserList />
                 <Event />
+
                 <p>{ sum(5,3) }</p>
             */}
 
+          </div>
       </>
-  )
+      */
 }
 
 export default App
